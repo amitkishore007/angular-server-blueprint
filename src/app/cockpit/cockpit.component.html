@@ -1,11 +1,11 @@
 <form action="" class="server-form">
   <div class="form-group">
     <label for="serverName">Server Name</label>
-    <input type="text" name="serverName" id="serverName" [(ngModel)]="serverName" class="form-control" placeholder="Enter server name">
+    <input type="text" name="serverName" id="serverName" #serverNameInput class="form-control" placeholder="Enter server name">
   </div>
   <div class="form-group">
     <label for="serverContent">Server Content</label>
-    <input type="text" class="form-control" [(ngModel)]="serverContent" placeholder="Enter Server Content" id="serverContent"
+<input type="text" class="form-control" #serverContentInput placeholder="Enter Server Content" id="serverContent"
       name="serverContent">
   </div>
   <div class="form-group">
