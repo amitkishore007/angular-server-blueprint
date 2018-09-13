@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'deep-databinding';
+  serverElements = [];
+ 
+  onServerCreated(EventData: {type:string, name:string, content:string}) {
+    this.serverElements.push({
+      type: "server",
+      name: EventData.name,
+      content: EventData.content
+    });
+  }
+
+  onBlueprintCreated(EventData: {type: string, name: string, content: string }) {
+    this.serverElements.push({
+      type: "blueprint",
+      name: EventData.name,
+      content: EventData.content
+    });
+  }
+
 }
