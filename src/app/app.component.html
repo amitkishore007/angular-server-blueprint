@@ -6,7 +6,10 @@
   </div>
   <div class="row">
     <div class="col-md-10">
-      <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElement"></app-server-element>
+      <app-server-element *ngFor="let serverElement of serverElements" [element]="serverElement">
+        <p class="card-text" *ngIf="serverElement.type=='server'">{{ serverElement.content }}</p>
+        <em *ngIf="serverElement.type=='blueprint'">{{ serverElement.content }}</em>
+      </app-server-element>
     </div>
   </div>
 </div>
